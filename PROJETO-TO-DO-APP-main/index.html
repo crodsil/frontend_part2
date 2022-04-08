@@ -25,19 +25,18 @@
       </div>
       <h1>Acessar</h1>
 
-
       <label>
         Email:
-        <input id="inputEmail" type="email" name="email" required>
-        <small id="emailValidacao"></small>
+        <input id="inputEmail" type="email" name="email" onchange="toggleButton()" required>
+        <!--<small id="emailValidacao"></small>-->
       </label>
       <label>
         Senha:
-        <input id="inputPassword" type="password" minlength="8" maxlength="14">
-        <small id="senhaValidacao"></small>
+        <input id="inputPassword" type="password" onchange="toggleButton()" minlength="8" maxlength="14">
+        <!--<small id="senhaValidacao"></small>-->
       </label>
 
-      <button id="botaoSalvar" type="submit">Acessar</button>
+      <button id="botaoSalvar" type="submit" disabled>Acessar</button>
 
     </form>
     <div class="ingressar">

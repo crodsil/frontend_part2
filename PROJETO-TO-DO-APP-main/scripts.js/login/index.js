@@ -1,25 +1,37 @@
 //Capturando os campos do formulário
-let campoEmailLogin = document.getElementById('inputEmail');
-let campoSenhaLogin = document.getElementById('inputPassword');
-let botaoSalvar = document.getElementById('botaoSalvar');
+//let campoEmailLogin = document.getElementById('inputEmail');
+//let campoSenhaLogin = document.getElementById('inputPassword');
+//let botaoSalvar = document.getElementById('botaoSalvar');
 
-let campoEmailLoginNormalizado;
-let campoSenhaLoginNormalizado;
+//let campoEmailLoginNormalizado;
+//let campoSenhaLoginNormalizado;
 
-let emailEValido = false;
-let senhaValida = false;
+//let emailEValido = false;
+//let senhaValida = false;
+
+function toggleButton() {
+    const inputEmail = document.querySelector('#inputEmail').value;
+    const inputPassword = document.querySelector('#inputPassword').value;
+  
+    if (inputEmail && inputPassword) {
+      document.querySelector('#botaoSalvar').disabled = false;
+      return
+    }
+    document.querySelector('#botaoSalvar').disabled = true;
+  }
 
 //Desabilita o botão ao iniciar a página
-botaoSalvar.setAttribute('disabled', true);
-botaoSalvar.innerText = "Bloqueado"
+//botaoSalvar.setAttribute('disabled', true);
+//botaoSalvar.innerText = "Bloqueado"
 
 //Cria o objeto que representa o login do usuário
-const usuarioObjeto = {
-    email: "",
-    senha: ""
-}
+//const usuarioObjeto = {
+//    email: "",
+//    senha: ""
+//}
 
 //Executa ao clicar no botão de Acessar
+/*
 botaoSalvar.addEventListener('click', function (evento) {
 
     //Se a validação passar, se for true o retorno da função....
@@ -35,17 +47,19 @@ botaoSalvar.addEventListener('click', function (evento) {
         usuarioObjeto.senha = campoSenhaLoginNormalizado;
 
         console.log(usuarioObjeto);
+*/
 
     //Se a validação NÃO passar, se for false o retorno da função....
-    } else {
+/*   } else {
         evento.preventDefault();
         alert("Ambas as informações devem ser preenchidas");
     }
 
 });
+*/
 
 //Ao clicar e interagir com o campo de "email" no formulário
-campoEmailLogin.addEventListener('blur', function () {
+/*campoEmailLogin.addEventListener('blur', function () {
     //Capturando o elemento <Small> do html
     let emailValidacao = document.getElementById('emailValidacao');
 
@@ -65,7 +79,9 @@ campoEmailLogin.addEventListener('blur', function () {
     }
     validaTelaDeLogin();
 });
+*/
 
+/*
 campoSenhaLogin.addEventListener('blur', function (){
     let senhaValidacao = document.getElementById('senhaValidacao');
     if (campoSenhaLogin.value != ""){
@@ -96,3 +112,4 @@ function validaTelaDeLogin() {
         return false
     }
 }
+*/
