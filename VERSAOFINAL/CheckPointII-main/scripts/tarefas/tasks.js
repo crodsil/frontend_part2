@@ -36,7 +36,7 @@ function buscaAsTarefasDoUsuario(tokenJwtArmazenado) {
     let urlGetTarefas = "https://ctd-todo-api.herokuapp.com/v1/tasks";
     let configuracaoRequisicao = {
         headers: {
-            'Authorization': `${token.JwtArmazenado}`, 
+            'Authorization': `${tokenJwtArmazenado}`, 
         },
     };
 
